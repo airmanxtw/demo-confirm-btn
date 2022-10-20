@@ -7,7 +7,7 @@
     "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "docs":"vite build --outDir docs --mode development"
+    "docs":"vite build --outDir docs --mode development --base docs"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
