@@ -2,7 +2,8 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-img :src="logo" class="my-3" contain height="200" />
+        <v-img :class="{ 'wobble-hor-bottom': wobble }" @mouseenter="wobble = true" @mouseleave="wobble = false" :src="logo"
+          class="my-3" contain height="200" />
       </v-col>
 
       <v-col class="mb-4">
@@ -27,6 +28,9 @@
 <script setup>
 import logo from '../assets/logo.svg';
 import confirmBtn from './ConfirmBtn.vue';
+import { ref } from 'vue';
+
+let wobble = ref(false);
 const confirm = () => {
   alert('confirm click!');
 }
@@ -45,6 +49,39 @@ const confirm = () => {
   100% {
     filter: blur(0px);
     opacity: 1;
+  }
+}
+
+.wobble-hor-bottom {
+  animation: wobble-hor-bottom 0.8s both;
+}
+
+@keyframes wobble-hor-bottom {
+
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
   }
 }
 </style>
