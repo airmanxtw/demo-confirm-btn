@@ -2,8 +2,8 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-img :class="{ 'wobble-hor-bottom': wobble }" @mouseenter="wobble = true" @mouseleave="wobble = false" :src="logo"
-          class="my-3" contain height="200" />
+        <v-img :class="{ 'wobble-hor-bottom': wobble }" @mouseenter="wobble = true" @mouseleave="wobble = false"
+          :src="logo" class="my-3" contain height="200" />
       </v-col>
 
       <v-col class="mb-4">
@@ -21,6 +21,9 @@
           </template>
         </confirm-btn>
       </v-col>
+      <v-col cols="12">
+        <demo-input></demo-input>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -28,6 +31,7 @@
 <script setup>
 import logo from '../assets/logo.svg';
 import confirmBtn from './ConfirmBtn.vue';
+import demoInput from "./DemoInput.vue";
 import { ref } from 'vue';
 
 let wobble = ref(false);
