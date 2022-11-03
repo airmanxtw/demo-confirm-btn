@@ -7,7 +7,7 @@
     "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "docs":"vite build --outDir docs --mode development --base demo-confirm-btn"
+    "docs": "vite build --outDir docs --mode development --base demo-confirm-btn"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
+    "sass": "^1.55.0",
     "vite": "^3.1.0",
     "vite-plugin-vuetify": "^1.0.0-alpha.12",
     "vue-cli-plugin-vuetify": "~2.5.8"

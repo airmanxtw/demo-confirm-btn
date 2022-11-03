@@ -22,7 +22,7 @@
         </confirm-btn>
       </v-col>
       <v-col cols="12">
-        <demo-input></demo-input>
+        <demo-div></demo-div>
       </v-col>
     </v-row>
   </v-container>
@@ -31,7 +31,8 @@
 <script setup>
 import logo from '../assets/logo.svg';
 import confirmBtn from './ConfirmBtn.vue';
-import demoInput from "./DemoInput.vue";
+//import demoInput from "./DemoInput.vue";
+import DemoDiv from "./DemoDiv.vue";
 import { ref } from 'vue';
 
 let wobble = ref(false);
