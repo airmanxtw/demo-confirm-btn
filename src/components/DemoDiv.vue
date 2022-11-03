@@ -1,7 +1,7 @@
 <template>
     <div class="gradient-border">hello div</div>
 </template>
-<style scoped lang="scss">
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
 .gradient-border {
   --border-width: 1px;
