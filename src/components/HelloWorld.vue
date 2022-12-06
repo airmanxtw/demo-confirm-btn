@@ -24,8 +24,7 @@
           </template>
         </confirm-btn>       
       </v-col>
-      <v-col cols="12">
-        <!-- <demo-div></demo-div> -->
+      <v-col cols="12">               
       </v-col>
     </v-row>
   </v-container>

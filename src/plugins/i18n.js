@@ -9,7 +9,7 @@ const i18n = createI18n({
       language:"language",
       confirm:"confirm",
       cancel:"cancel",
-      deleteConfirm:"Are you sure you want to delete this item?"
+      deleteConfirm:"Are you sure you want to delete this item?"      
     },
     tw: {
       delete: "刪除",
@@ -17,7 +17,7 @@ const i18n = createI18n({
       language:"語系",
       confirm:"確定",
       cancel:"取消",
-      deleteConfirm:"確定要刪除這個項目嗎?"
+      deleteConfirm:"確定要刪除這個項目嗎?"      
     },
   },
 });
