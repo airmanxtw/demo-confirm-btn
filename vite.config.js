@@ -12,4 +12,14 @@ export default defineConfig({
     },
   },
   plugins: [vue(), vuetify({ autoImport: true })],
+
+  //i18n <-- 
+  resolve: {
+    alias: [
+      {
+        find: 'vue-i18n',
+        replacement: 'vue-i18n/dist/vue-i18n.cjs.js',
+      }
+    ]
+  }
 });

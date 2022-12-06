@@ -2,27 +2,30 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
+        <v-select :items="langs" v-model="locale" :label="t('language')" ></v-select>
+      </v-col>
+      <v-col cols="12">
         <v-img :class="{ 'wobble-hor-bottom': wobble }" @mouseenter="wobble = true" @mouseleave="wobble = false"
           :src="logo" class="my-3" contain height="200" />
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3 text-focus-in">
-          Welcome to the Vuetify 3 Beta
+        <h1 class="display-2 font-weight-bold mb-3 text-focus-in">          
+          {{t('title')}}
         </h1>
       </v-col>
 
       <v-col cols="12">
-        <confirm-btn color="primary" @confirm="confirm" icon="delete" label="delete">
+        <confirm-btn color="primary" @confirm="confirm" icon="delete" :label="t('delete')">
           <template v-slot:message>
             <p class="text-h5">
-              Are you sure you want to delete this item?
+              {{t('deleteConfirm')}}
             </p>
           </template>
-        </confirm-btn>
+        </confirm-btn>       
       </v-col>
       <v-col cols="12">
-        <demo-div></demo-div>
+        <!-- <demo-div></demo-div> -->
       </v-col>
     </v-row>
   </v-container>
@@ -34,6 +37,21 @@ import confirmBtn from './ConfirmBtn.vue';
 //import demoInput from "./DemoInput.vue";
 import DemoDiv from "./DemoDiv.vue";
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
+const langs = ref([
+  {
+    title: 'english',
+    value: 'en'
+  },
+  {
+    title: '中文',
+    value: 'tw'
+  }
+])
+
 
 let wobble = ref(false);
 const confirm = () => {

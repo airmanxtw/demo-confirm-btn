@@ -10,14 +10,16 @@
             </v-card-text>
             <v-card-actions>
                 <v-spacer />
-                <v-btn color="primary" @click="() => { model = false; emits('confirm') }">confirm</v-btn>
-                <v-btn color="secondary" @click="model = false">cancel</v-btn>
+                <v-btn color="primary" @click="() => { model = false; emits('confirm') }">{{t('confirm')}}</v-btn>
+                <v-btn color="secondary" @click="model = false">{{t('cancel')}}</v-btn>
             </v-card-actions>
         </v-card>
     </v-dialog>
 </template>
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 let model = ref(false);
 let rotate = ref(false);
 const emits = defineEmits(['confirm']);
